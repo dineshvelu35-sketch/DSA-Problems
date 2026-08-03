@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	vector<int>A;
+	int x;
+	string S;
+	getline(cin,S);
+	stringstream ss(S);
+	while(ss>>x)
+	{
+		A.push_back(x);
+	}
+	int T;
+	cin>>T;
+	for(int i=0;i<A.size();i++)
+	{
+		for(int j=i+1;j<A.size();j++)
+		{
+			if(A[i]+A[j]==T)
+			{
+				cout<<"True";
+				return 0;				
+			}
+		}
+	}
+	cout<<"False";
+	return 0;
+}
